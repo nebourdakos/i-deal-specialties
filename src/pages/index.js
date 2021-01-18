@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 
 import lorie from "../assets/images/lorie.jpg";
 import foodbank from "../assets/images/foodbank.jpg";
-import gross from "../assets/images/gross.webp";
+import container from "../assets/images/container.png";
 import sandwich from "../assets/images/sandwich.jpg";
 import turkey from "../assets/images/turkey.jpg";
 import cupcake from "../assets/images/cupcake.jpeg";
@@ -94,7 +94,7 @@ function Homepage() {
               </p>
               <p>
                 <span>
-                  <img src={gross} alt="" />
+                  <img src={container} alt="" />
                 </span>
               </p>
               <p>
