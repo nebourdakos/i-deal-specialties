@@ -9,7 +9,7 @@ import gross from "../assets/images/gross.webp";
 import sandwich from "../assets/images/sandwich.jpg";
 import turkey from "../assets/images/turkey.jpg";
 import cupcake from "../assets/images/cupcake.jpeg";
-import ham from "../assets/images/ham.jpeg";
+import ham from "../assets/images/Ham.jpeg";
 import chicken from "../assets/images/chicken.jpeg";
 import pic02 from "../assets/images/pic02.jpg";
 import pic03 from "../assets/images/pic03.jpg";
