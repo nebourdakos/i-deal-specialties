@@ -16,6 +16,11 @@ import pic03 from "../assets/images/pic03.jpg";
 import pic04 from "../assets/images/pic04.jpg";
 import mask from "../assets/images/mask.png";
 import cutlery from "../assets/images/cutlery.png";
+import Carousel, {
+  autoplayPlugin,
+  slidesToShowPlugin
+} from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
 
 function Homepage() {
   const siteTitle = "Gatsby Starter - Photon";
@@ -44,18 +49,22 @@ function Homepage() {
             </p>
           </div>
           <div className="col-6">
-            <span className="image fit">
-              <img src={foodbank} alt="" />
-            </span>
+            <div style={{ textAlign: "center", maxWidth: "500px" }}>
+              <span className="image fit">
+                <img src={foodbank} alt="" />
+              </span>
+            </div>
           </div>
         </div>
       </section>
       <section id="one" className="main style1">
         <div className="grid-wrapper">
           <div className="col-4">
-            <span className="image fit">
-              <img src={lorie} alt="" />
-            </span>
+            <div style={{ textAlign: "center" }}>
+              <span className="image">
+                <img style={{ maxWidth: "300px" }} src={lorie} alt="" />
+              </span>
+            </div>
           </div>
           <div className="col-8">
             <header className="major">
@@ -84,9 +93,69 @@ function Homepage() {
 
       <section id="two" className="main style2">
         <div className="grid-wrapper">
-          <div className="col-3">
+          <div className="col-12">
+            <div style={{ textAlign: "center" }}>
+              <header className="major">
+                <h2>
+                  I Deal Specialties has or can find what you need!
+                  <br />
+                </h2>
+                <h2>
+                  Let us look for you!
+                  <br />
+                </h2>
+              </header>
+            </div>
+          </div>
+        </div>
+        <div className="inner">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexFlow: "row",
+              alignContent: "center"
+            }}
+          >
+            <div style={{ height: "250px", width: "800px" }}>
+              <ul className="image fit">
+                <Carousel
+                  plugins={[
+                    "infinite",
+                    // "arrows",
+                    {
+                      resolve: slidesToShowPlugin,
+                      options: {
+                        numberOfSlides: 4
+                      }
+                    },
+
+                    {
+                      resolve: autoplayPlugin,
+                      options: {
+                        interval: 2000
+                      }
+                    }
+                  ]}
+                  animationSpeed={1000}
+                >
+                  <img src={sandwich} />
+                  <img src={container} />
+                  <img src={cupcake} />
+                  <img src={cutlery} />
+                  <img src={turkey} />
+                  <img src={chicken} />
+                  <img src={mask} />
+                  <img src={ham} />
+                </Carousel>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid-wrapper">
+          {/* <div className="col-3">
             <ul className="image fit">
-              {/* <span className="icon style1 major fa-code"> */}
               <p>
                 <span>
                   <img src={sandwich} alt="" />
@@ -108,10 +177,9 @@ function Homepage() {
                 </span>
               </p>
             </ul>
-          </div>
-          <div className="col-3">
+          </div> */}
+          {/* <div className="col-3">
             <ul className="image fit">
-              {/* <span className="icon style1 major fa-code"> */}
               <p>
                 <span>
                   <img src={turkey} alt="" />
@@ -133,58 +201,40 @@ function Homepage() {
                 </span>
               </p>
             </ul>
+          </div> */}
+          <div className="col-6">
+            <p>
+              <div style={{ alignContent: "center" }}>
+                <ul>
+                  <li>Chicken - breaded and unbreaded, fillets and nuggets</li>
+                  <li>Chicken wings</li>
+                  <li>Turkey – whole, sliced and ground</li>
+                  <li>Hams</li>
+                  <li>Breaded Fish-Pollack and Cod</li>
+                  <li>Tuna – in cans or pouches</li>
+                  <li>Eggs – scrambled and liquid</li>
+                  <li>Potatoes-frozen and refrigerated</li>
+                  <li>Mixed Vegetables & Fruits- bulk and retail pack</li>
+                </ul>
+              </div>
+            </p>
           </div>
           <div className="col-6">
-            <header className="major">
-              <h2>
-                I Deal Specialties has or can find what you need! Let us look
-                for you!
-                <br />
-              </h2>
-            </header>
-            <ul>
-              {/* <p> */}
-              <li>Chicken - breaded and unbreaded, fillets and nuggets</li>
-              <li>Chicken wings</li>
-              <li>Turkey – whole, sliced and ground</li>
-              <li>Hams</li>
-              <li>Breaded Fish-Pollack and Cod</li>
-              <li>Tuna – in cans or pouches</li>
-              <li>Eggs – scrambled and liquid</li>
-              <li>Potatoes-frozen and refrigerated</li>
-              <li>Mixed Vegetables & Fruits- bulk and retail pack</li>
-              {/* </p>
-              <p> */}
-              <li>Pre-made sandwiches</li>
-              <li>Deserts - Cakes, Pies and Cookies</li>
-              <li>Ice creams & sorbet – individual and multi-gallon</li>
-              <li>Snack foods</li>
-              <li>Cereals</li>
-              {/* </p> */}
-              {/* <p> */}
-              <li>Hinged containers</li>
-              <li>Paper and plastic bags</li>
-              <li>Disposable utensils</li>
-              <li>Condiments</li>
-              <li>Toilet Paper & Paper Towels</li>
-              {/* </p> */}
-            </ul>
-            {/* <p></p>
-            <p>
-              Blandit faucibus proin. Ac aliquam integer adipiscing enim non
-              praesent vis commodo nunc phasellus cubilia ac risus accumsan.
-              Accumsan blandit. Lobortis phasellus non lobortis dit varius mi
-              varius accumsan lobortis. Blandit ante aliquam lacinia lorem
-              lobortis semper morbi col faucibus vitae integer placerat accumsan
-              orci eu mi odio tempus adipiscing adipiscing adipiscing curae
-              consequat feugiat etiam dolore.
-            </p>
-            <p>
-              Adipiscing a commodo ante nunc accumsan interdum mi ante
-              adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus
-              nascetur ac non. Lorem curae eu ante amet sapien in tempus ac.
-              Adipiscing id accumsan adipiscing ipsum.
-            </p> */}
+            <div style={{ alignContent: "center" }}>
+              <ul>
+                <li>Pre-made sandwiches</li>
+                <li>Deserts - Cakes, Pies and Cookies</li>
+                <li>Ice creams & sorbet – individual and multi-gallon</li>
+                <li>Snack foods</li>
+                <li>Cereals</li>
+
+                <li>Hinged containers</li>
+                <li>Paper and plastic bags</li>
+                <li>Disposable utensils</li>
+                <li>Condiments</li>
+                <li>Toilet Paper & Paper Towels</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

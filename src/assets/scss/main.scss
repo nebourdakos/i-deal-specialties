@@ -4,6 +4,8 @@
 @import "libs/skel";
 @import url("../css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
 
 @import "css-grid";
 /*
@@ -116,7 +118,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.35em;
+  font-size: 1.1em;
   line-height: 1.5em;
 }
 
@@ -895,7 +897,7 @@ button,
 
 @mixin dark($color-this-bg: _palette(dark, bg)) {
   background-color: $color-this-bg;
-  color: _palette(dark, fg);
+  // color: _palette(dark, fg);
 
   a {
     border-bottom-color: transparentize(_palette(dark, fg), 0.25);
@@ -913,7 +915,7 @@ button,
   h6,
   strong,
   b {
-    color: _palette(dark, fg-bold);
+    // color: _palette(dark, fg-bold);
   }
 
   header {
@@ -923,7 +925,7 @@ button,
 
     &.major {
       &:after {
-        background: _palette(dark, border);
+        // background: _palette(dark, border);
       }
     }
   }
@@ -987,9 +989,9 @@ button,
   }
 
   &.style2 {
-    @include dark(#333);
+    @include dark(#f8f9fa);
     background-attachment: fixed, fixed;
-    background-image: url("../images/overlay1.png"), url("../images/header.jpg");
+    // background-image: url("../images/overlay1.png"), url("../images/header.jpg");
     background-size: auto, cover;
   }
 }
@@ -997,11 +999,15 @@ button,
 /* Header */
 
 #header {
-  @include padding(9em, 0, (0, 0, _size(element-margin), 0));
+  @include padding(8em, 0, (0, 0, _size(element-margin), 0));
   @include dark(#4686a0);
   background-attachment: fixed;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/chicken.jpeg");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/farm.jpg");
 
   background-position: center center;
   background-size: cover;
@@ -1048,21 +1054,21 @@ button,
     }
   }
 
-  &:after {
-    @include vendor("transition", "opacity 1s ease");
-    background-image: linear-gradient(
-      45deg,
-      _palette(accent3-alt),
-      _palette(accent6-alt)
-    );
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+  // &:after {
+  //   // @include vendor("transition", "opacity 1s ease");
+  //   // // background-image: linear-gradient(
+  //   // //   45deg,
+  //   // //   _palette(accent3-alt),
+  //   // //   _palette(accent6-alt)
+  //   // // );
+  //   // content: "";
+  //   // height: 100%;
+  //   // left: 0;
+  //   // opacity: 0;
+  //   // position: absolute;
+  //   // top: 0;
+  //   // width: 100%;
+  // }
 }
 
 .body.is-loading {
@@ -1090,7 +1096,7 @@ button,
   @include dark(#4686a0);
   background-attachment: fixed, fixed, fixed;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/chicken.jpeg");
+    url("../images/farm.jpg");
 
   background-position: center center;
   background-size: cover;
@@ -1137,7 +1143,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(6em, 0, (0, 0, _size(element-margin), 0));
+    @include padding(8em, 0, (0, 0, _size(element-margin), 0));
   }
 }
 
@@ -1193,7 +1199,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(5em, 0, (0, 0, _size(element-margin), 0));
+    @include padding(8em, 0, (0, 0, _size(element-margin), 0));
     background-attachment: scroll;
 
     br {
@@ -1237,7 +1243,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(8em, 3em, (0, 0, _size(element-margin), 0));
+    @include padding(8em, 0em, (0, 0, _size(element-margin), 0));
   }
 
   /* Footer */
@@ -1335,7 +1341,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(4em, 3em, (0, 0, _size(element-margin), 0));
+    @include padding(8em, 0em, (0, 0, _size(element-margin), 0));
 
     .actions {
       margin: _size(element-margin) 0 0 0;
@@ -1410,7 +1416,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(4em, 2em, (0, 0, _size(element-margin), 0));
+    @include padding(8em, 0em, (0, 0, _size(element-margin), 0));
 
     br {
       display: none;
@@ -1458,7 +1464,7 @@ button,
   /* Header */
 
   #header {
-    @include padding(3em, 1em, (0, 0, _size(element-margin), 0));
+    @include padding(8em, 1em, (0, 0, _size(element-margin), 0));
   }
 
   /* Footer */
@@ -1466,4 +1472,19 @@ button,
   #footer {
     @include padding(2em, 1em, (0, 0, _size(element-margin), 0));
   }
+}
+
+.inner h1 {
+  color: #f8f9fa;
+}
+
+.logo {
+  position: absolute;
+  top: -28px;
+  left: 10px;
+  width: 250px;
+}
+
+#header {
+  position: relative;
 }
