@@ -5,22 +5,27 @@ import Layout from "../components/layout";
 
 import lorie from "../assets/images/lorie.jpg";
 import foodbank from "../assets/images/foodbank.jpg";
-import container from "../assets/images/container.png";
-import sandwich from "../assets/images/sandwich.jpg";
-import turkey from "../assets/images/turkey.jpg";
-import cupcake from "../assets/images/cupcake.jpeg";
-import ham from "../assets/images/Ham.jpeg";
-import chicken from "../assets/images/chicken.jpeg";
-import pic02 from "../assets/images/pic02.jpg";
-import pic03 from "../assets/images/pic03.jpg";
-import pic04 from "../assets/images/pic04.jpg";
-import mask from "../assets/images/mask.png";
-import cutlery from "../assets/images/cutlery.png";
-import Carousel, {
-  autoplayPlugin,
-  slidesToShowPlugin
-} from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
+import collage from "../assets/images/collage.png";
+// import container from "../assets/images/container.png";
+// import sandwich from "../assets/images/sandwich.jpg";
+// import turkey from "../assets/images/turkey.jpg";
+// import cupcake from "../assets/images/cupcake.jpeg";
+// import ham from "../assets/images/Ham.jpeg";
+// import chicken from "../assets/images/chicken.jpeg";
+// import pic02 from "../assets/images/pic02.jpg";
+// import pic03 from "../assets/images/pic03.jpg";
+// import pic04 from "../assets/images/pic04.jpg";
+// import mask from "../assets/images/mask.png";
+// import cutlery from "../assets/images/cutlery.png";
+// import Carousel, {
+//   autoplayPlugin,
+//   slidesToShowPlugin
+// } from "@brainhubeu/react-carousel";
+// import "@brainhubeu/react-carousel/lib/style.css";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Homepage() {
   const siteTitle = "Gatsby Starter - Photon";
@@ -34,7 +39,7 @@ function Homepage() {
           <div className="col-6">
             <header className="major">
               <h2>
-                Header
+                I Deal Specialties
                 <br />
               </h2>
             </header>
@@ -108,52 +113,14 @@ function Homepage() {
             </div>
           </div>
         </div>
-        <div className="inner">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              flexFlow: "row",
-              alignContent: "center"
-            }}
-          >
-            <div style={{ height: "250px", width: "800px" }}>
-              <ul className="image fit">
-                <Carousel
-                  plugins={[
-                    "infinite",
-                    // "arrows",
-                    {
-                      resolve: slidesToShowPlugin,
-                      options: {
-                        numberOfSlides: 4
-                      }
-                    },
-
-                    {
-                      resolve: autoplayPlugin,
-                      options: {
-                        interval: 2000
-                      }
-                    }
-                  ]}
-                  animationSpeed={1000}
-                >
-                  <img src={sandwich} />
-                  <img src={container} />
-                  <img src={cupcake} />
-                  <img src={cutlery} />
-                  <img src={turkey} />
-                  <img src={chicken} />
-                  <img src={mask} />
-                  <img src={ham} />
-                </Carousel>
-              </ul>
+        <div className="grid-wrapper">
+          <div className="col-4">
+            <div style={{ textAlign: "center" }}>
+              <span className="image">
+                <img style={{ maxWidth: "300px" }} src={collage} alt="" />
+              </span>
             </div>
           </div>
-        </div>
-
-        <div className="grid-wrapper">
           {/* <div className="col-3">
             <ul className="image fit">
               <p>
@@ -202,9 +169,9 @@ function Homepage() {
               </p>
             </ul>
           </div> */}
-          <div className="col-6">
+          <div className="col-4">
             <p>
-              <div style={{ alignContent: "center" }}>
+              <div style={{ alignContent: "center", marginTop: "50px" }}>
                 <ul>
                   <li>Chicken - breaded and unbreaded, fillets and nuggets</li>
                   <li>Chicken wings</li>
@@ -219,8 +186,8 @@ function Homepage() {
               </div>
             </p>
           </div>
-          <div className="col-6">
-            <div style={{ alignContent: "center" }}>
+          <div className="col-4">
+            <div style={{ alignContent: "center", marginTop: "50px" }}>
               <ul>
                 <li>Pre-made sandwiches</li>
                 <li>Deserts - Cakes, Pies and Cookies</li>
