@@ -4,19 +4,23 @@ import Helmet from "react-helmet";
 import Layout from "../components/layout";
 
 import lorie from "../assets/images/lorie.jpg";
+import breaded from "../assets/images/breaded.jpg";
+import ugh from "../assets/images/ugh.png";
+import canned from "../assets/images/canned.jpg";
+import full from "../assets/images/full.jpg";
 import foodbank from "../assets/images/foodbank.jpg";
 import collage from "../assets/images/collage.png";
-// import container from "../assets/images/container.png";
-// import sandwich from "../assets/images/sandwich.jpg";
+import container from "../assets/images/container.png";
+import sandwich from "../assets/images/sandwich.jpg";
 // import turkey from "../assets/images/turkey.jpg";
-// import cupcake from "../assets/images/cupcake.jpeg";
-// import ham from "../assets/images/Ham.jpeg";
-// import chicken from "../assets/images/chicken.jpeg";
+import cupcake from "../assets/images/cupcake.jpeg";
+import ham from "../assets/images/Ham.jpeg";
+import chicken from "../assets/images/chicken.jpeg";
 // import pic02 from "../assets/images/pic02.jpg";
 // import pic03 from "../assets/images/pic03.jpg";
 // import pic04 from "../assets/images/pic04.jpg";
 // import mask from "../assets/images/mask.png";
-// import cutlery from "../assets/images/cutlery.png";
+import cutlery from "../assets/images/cutlery.png";
 // import Carousel, {
 //   autoplayPlugin,
 //   slidesToShowPlugin
@@ -113,7 +117,7 @@ function Homepage() {
             </div>
           </div>
         </div>
-        <div className="grid-wrapper">
+        {/* <div className="grid-wrapper">
           <div className="col-4">
             <div style={{ textAlign: "center" }}>
               <span className="image">
@@ -121,59 +125,49 @@ function Homepage() {
               </span>
             </div>
           </div>
-          {/* <div className="col-3">
-            <ul className="image fit">
-              <p>
-                <span>
-                  <img src={sandwich} alt="" />
-                </span>
-              </p>
-              <p>
-                <span>
-                  <img src={container} alt="" />
-                </span>
-              </p>
-              <p>
-                <span>
+        </div> */}
+        <div className="grid-wrapper">
+          <div className="col-4">
+            <div style={{ marginTop: "45px" }}>
+              <div className="grid">
+                <div>
                   <img src={cupcake} alt="" />
-                </span>
-              </p>
-              <p>
-                <span>
-                  <img src={cutlery} alt="" />
-                </span>
-              </p>
-            </ul>
-          </div> */}
-          {/* <div className="col-3">
-            <ul className="image fit">
-              <p>
-                <span>
-                  <img src={turkey} alt="" />
-                </span>
-              </p>
-              <p>
-                <span>
-                  <img src={chicken} alt="" />
-                </span>
-              </p>
-              <p>
-                <span>
-                  <img src={mask} alt="" />
-                </span>
-              </p>
-              <p>
-                <span>
+                </div>
+                <div>
+                  <img src={breaded} alt="" />
+                </div>
+                <div>
+                  <img src={sandwich} alt="" />
+                </div>
+                <div>
                   <img src={ham} alt="" />
-                </span>
-              </p>
-            </ul>
-          </div> */}
+                </div>
+                <div>
+                  <img src={chicken} alt="" />
+                </div>
+                <div>
+                  <img src={ugh} alt="" />
+                </div>
+                <div>
+                  <img src={canned} alt="" />
+                </div>
+                <div>
+                  <img src={container} alt="" />
+                </div>
+                <div>
+                  <img src={full} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-4">
             <p>
               <div style={{ alignContent: "center", marginTop: "50px" }}>
                 <ul>
-                  <li>Chicken - breaded and unbreaded, fillets and nuggets</li>
+                  <li>
+                    Chicken - breaded and unbreaded, fillets, nuggets and in
+                    cans
+                  </li>
                   <li>Chicken wings</li>
                   <li>Turkey – whole, sliced and ground</li>
                   <li>Hams</li>

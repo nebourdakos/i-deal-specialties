@@ -1591,3 +1591,29 @@ button,
 .slick-arrow.slick-hidden {
   display: none;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+}
+.grid > div {
+  background: #f8f9fa;
+  padding: 0rem;
+  display: block;
+  place-items: center;
+}
+.grid > div ::before {
+  content: "";
+  padding-top: 100%;
+  display: block;
+  grid-area: 1 / 1 / 2/ 2;
+}
+.grid > div > img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  background-position: center;
+  grid-area: 1 / 1 / 2/ 2;
+  border-radius: 5px;
+}
