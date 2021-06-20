@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 
 import lorie from "../assets/images/lorie.jpg";
 import breaded from "../assets/images/breaded.jpg";
-import ugh from "../assets/images/ugh.png";
+import cut from "../assets/images/cut.png";
 import canned from "../assets/images/canned.jpg";
 import full from "../assets/images/full.jpg";
 import foodbank from "../assets/images/foodbank.jpg";
@@ -146,7 +146,7 @@ function Homepage() {
                   <img src={chicken} alt="" />
                 </div>
                 <div>
-                  <img src={ugh} alt="" />
+                  <img src={cut} alt="" />
                 </div>
                 <div>
                   <img src={canned} alt="" />
