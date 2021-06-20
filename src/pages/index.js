@@ -32,7 +32,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Homepage() {
-  const siteTitle = "Ideal Specialties";
+  const siteTitle = "I Deal Specialties";
 
   return (
     <Layout>
