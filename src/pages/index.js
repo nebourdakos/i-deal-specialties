@@ -32,7 +32,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Homepage() {
-  const siteTitle = "Gatsby Starter - Photon";
+  const siteTitle = "Ideal Specialties";
 
   return (
     <Layout>
