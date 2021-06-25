@@ -206,15 +206,15 @@ function Homepage() {
             <header className="major">
               <h2>Testimonials:</h2>
             </header>
-            <p>Read What Our Customers Have To Say</p>
+            <p>Here Is What Our Customers Have to Say:</p>
           </div>
 
           <div className="col-3">
             {/* <span className="image fit">
               <img src={pic02} alt="" />
             </span> */}
-            <h3>Everyone loved the chicken!</h3>
-            <p>John Doe</p>
+            <h3>"Everyone loved the chicken!"</h3>
+            {/* <p>John Doe</p> */}
             {/* <ul className="actions">
               <li>
                 <a href="#" className="button">
@@ -228,10 +228,10 @@ function Homepage() {
               <img src={pic03} alt="" />
             </span> */}
             <h3>
-              Fast delivery and they tracked it every step of the way to keep me
-              informed
+              "Fast delivery and they tracked it every step of the way to keep
+              me informed"
             </h3>
-            <p>John Doe</p>
+            {/* <p>John Doe</p> */}
             {/* <ul className="actions">
               <li>
                 <a href="#" className="button">
@@ -244,8 +244,8 @@ function Homepage() {
             {/* <span className="image fit">
               <img src={pic04} alt="" />
             </span> */}
-            <h3>Found exactly what I needed and at a great price</h3>
-            <p>John Doe</p>
+            <h3>"Found exactly what I needed and at a great price"</h3>
+            {/* <p>John Doe</p> */}
             {/* <ul className="actions">
               <li>
                 <a href="#" className="button">
@@ -258,8 +258,8 @@ function Homepage() {
             {/* <span className="image fit">
               <img src={pic04} alt="" />
             </span> */}
-            <h3>Thank you for the wonderful customer service</h3>
-            <p>John Doe</p>
+            <h3>"Thank you for the wonderful customer service"</h3>
+            {/* <p>John Doe</p> */}
             {/* <ul className="actions">
               <li>
                 <a href="#" className="button">
